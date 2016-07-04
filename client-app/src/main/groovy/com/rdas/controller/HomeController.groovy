@@ -17,7 +17,7 @@ public class HomeController {
     public String home(@RequestHeader(value = "Accept") String accept,
                        @RequestHeader(value = "Accept-Language") String acceptLanguage,
                        @RequestHeader(value = "User-Agent", defaultValue = "foo") String userAgent,
-                       @RequestHeader(value = "sm_user", defaultValue = "sm_u") String smUser,
+                       @RequestHeader(value = "sm_user", defaultValue = "sm_u_default_value") String smUser,
                        @RequestHeader HttpHeaders headers,
                        HttpServletResponse response) {
         System.out.println("accept: " + accept);
