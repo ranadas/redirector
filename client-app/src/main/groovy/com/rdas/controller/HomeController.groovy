@@ -20,11 +20,14 @@ public class HomeController {
                        @RequestHeader(value = "sm_user", defaultValue = "sm_u_default_value") String smUser,
                        @RequestHeader HttpHeaders headers,
                        HttpServletResponse response) {
-        System.out.println("accept: " + accept);
-        System.out.println("acceptLanguage: " + acceptLanguage);
-        System.out.println("userAgent: " + userAgent);
-        System.out.println("smUser: " + smUser);
+        println "accept: $accept"
+        println "acceptLanguage: $acceptLanguage"
+        println "userAgent: $userAgent"
+        println "smUser: $smUser"
 
+        def set = headers.entrySet()
+
+        println set
 
         return "index"
     }
