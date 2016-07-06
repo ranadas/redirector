@@ -3,7 +3,6 @@ apply plugin : 'idea'
 subprojects {
     apply plugin: 'java'
     apply plugin: 'groovy'
-    //apply plugin: 'eclipse-wtp'
 
     repositories {
        mavenCentral()
