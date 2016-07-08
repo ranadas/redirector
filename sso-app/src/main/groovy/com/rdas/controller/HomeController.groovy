@@ -23,22 +23,23 @@ import javax.servlet.http.HttpServletResponse
 @Slf4j
 @Controller
 public class HomeController {
-
     private final OkHttpClient httpClient;
 
     public HomeController() {
         this.httpClient = new OkHttpClient()
     }
 
-    @RequestMapping(method = RequestMethod.GET, value = "/")
-    public void homeGet(HttpServletResponse response, HttpServletRequest request) {
-        //response.setHeader("sm_user", "ranapratapdas");
+    @RequestMapping(method = RequestMethod.GET, value = "/red")
+    public void withRedirect(HttpServletResponse response, HttpServletRequest request) {
+        response.setHeader("sm_user", "ranapratapdas");
         //response.setStatus(HttpServletResponse.SC_FOUND);
-        //response.sendRedirect("http://localhost:8080");
+        response.sendRedirect("http://localhost:8080");
         // comment out the return because we are redirectng to a different url.
         //return "home"
+    }
 
-
+    @RequestMapping(method = RequestMethod.GET, value = "/pxy")
+    public void proxying(HttpServletResponse response, HttpServletRequest request) {
         def url = "http://localhost:8080"
 
         Headers.Builder headersBuilder = new Headers.Builder();
@@ -60,14 +61,14 @@ public class HomeController {
 
         int httpStatusCode = okResponse.code();
         if (httpStatusCode == HttpStatus.OK.value()) {
-            response.setContentType(MediaType.ALL_VALUE); //what's the content type? could be the one from okresponse, I guess
+            response.setContentType(MediaType.ALL_VALUE);
             response.setContentLengthLong(body.contentLength());
             response.setHeader("sm_user", "ranapratapdas");
-
+            response.set
             IOUtils.copy(body.byteStream(), response.getOutputStream());
             response.flushBuffer();
         } else {
-            //what else?
+            //TODO
         }
     }
 
