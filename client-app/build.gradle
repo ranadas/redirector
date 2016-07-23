@@ -21,4 +21,9 @@ dependencies {
     compile 'org.springframework.boot:spring-boot-starter-thymeleaf'
     compile "org.projectlombok:lombok:1.16.8"
     compile "org.hibernate:hibernate-validator"
+
+    compile "org.codehaus.groovy:groovy-all:2.4.1"
+    testCompile "org.spockframework:spock-core:1.0-groovy-2.4"
+    compile "com.fasterxml.jackson.jr:jackson-jr-all:2.8+"
+    compile "com.eclipsesource.minimal-json:minimal-json:0.9.4"
 }

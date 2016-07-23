@@ -1,0 +1,52 @@
+[
+  {
+    "_id": "4dd90e0f-31d1-4976-9e95-2f619ebb81f2",
+    "workspaceId": "4dd90e0f-31d1-4976-9e95-2f619ebb81f2",
+    "dob": "1981-05-02",
+    "taxYear": 2015,
+    "taxIdentificationNumber": "102231608",
+    "version": "6555123d-9043-4136-9b2b-53066f5c79cb",
+    "filings": {
+      "c99f1ecf-495b-4e65-b220-57e5eb7968fc": {
+        "officeId": null,
+        "returnType": "1040",
+        "filingId": "c99f1ecf-495b-4e65-b220-57e5eb7968fc",
+        "creationDate": 1447997601924,
+        "filingEntities": {
+          "IRS": {
+            "agency": "US",
+            "guid": "GUID000102231608",
+            "creationDate": 1447997601924,
+            "method": "ELECTRONIC",
+            "filingStatus": "PENDING_TRANSMISSION",
+            "amendment": false,
+            "extension": false,
+            "resources": [
+              {
+                "name": "test1.pdf",
+                "uriPath": "/4dd90e0f-31d1-4976-9e95-2f619ebb81f2/r/5d5713aa-d917-49e2-a894-8eb470fe7733/e/US/f/test1.pdf?rev=5201e2e5e8a855900ec5592f0688a6e4ccf2ce05",
+                "contentType": "application/octet-stream",
+                "metadata": {
+                  "x-hrb-taxdoc-type": "pdf",
+                  "x-hrb-office-id": "1009",
+                  "x-hrb-taxpro-id": "16589",
+                  "taxdoc-type": "pdf",
+                  "x-hrb-guid": "GUID000102231608",
+                  "x-hrb-ptin": "12345",
+                  "tax-entity": "US",
+                  "x-hrb-content-version": "1"
+                }
+              }
+            ],
+            "efaReceivedDate": null,
+            "irsReceivedDate": null,
+            "irsStatusDate": null,
+            "efaUniqueKey": 0
+          }
+        },
+        "filingResources": [
+        ]
+      }
+    }
+  }
+]

@@ -10,6 +10,22 @@
 <div class="container">
     <h1 layout:fragment="header">Index</h1>
     <div layout:fragment="content">Some Fake content</div>
+
+
+    <form action="#" th:action="@{/sg/add}" th:object="${subjectGroup}" method="POST">
+        <p><input type="text" th:field="*{name}" placeholder="Name..."/></p>
+        <h3>Options</h3>
+        <button type="submit" name="addOption">Add Option</button>
+        <table>
+            <tr th:each="option, rowStat : *{options}">
+                <td><input type="text" th:field="*{options[__${rowStat.index}__].label}" placeholder="Option..."/></td>
+            </tr>
+        </table>
+        <button type="submit">Add</button>
+    </form>
 </div>
 </body>
 </html>
+
+http://stingh711.github.io/dynamic-form-with-springmvc-and-thymeleaf.html
+
