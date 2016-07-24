@@ -1,1 +1,1 @@
-include 'sso-app', 'client-app', 'web-js'
+include 'sso-app', 'client-app'
